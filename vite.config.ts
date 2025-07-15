@@ -27,8 +27,8 @@ export default defineConfig(async ({ command }) => {
       },
     },
     root: path.resolve(import.meta.dirname, "client"),
-    // Use /tinkerlab/ for GitHub Pages deployment
-    base: "/tinkerlab/",
+    // Use root path for Vercel, /tinkerlab/ for GitHub Pages
+    base: process.env.VERCEL ? "/" : "/tinkerlab/",
     build: {
       outDir: path.resolve(import.meta.dirname, "dist/public"),
       emptyOutDir: true,
