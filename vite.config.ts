@@ -27,9 +27,8 @@ export default defineConfig(async ({ command }) => {
       },
     },
     root: path.resolve(import.meta.dirname, "client"),
-    // Use /tinkerlab/ base path only for production builds (GitHub Pages)
-    // Use / for development to avoid HMR issues
-    base: command === "build" ? "/tinkerlab/" : "/",
+    // Use / for both development and production for self-hosted deployment
+    base: "/",
     build: {
       outDir: path.resolve(import.meta.dirname, "dist/public"),
       emptyOutDir: true,
