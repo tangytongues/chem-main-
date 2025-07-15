@@ -27,8 +27,8 @@ export default defineConfig(async ({ command }) => {
       },
     },
     root: path.resolve(import.meta.dirname, "client"),
-    // Use / for both development and production for self-hosted deployment
-    base: "/",
+    // Use /tinkerlab/ for GitHub Pages deployment
+    base: "/tinkerlab/",
     build: {
       outDir: path.resolve(import.meta.dirname, "dist/public"),
       emptyOutDir: true,
